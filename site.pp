@@ -88,6 +88,17 @@ file {
 }
 
 ##################################
+# PHP + Apache
+include php::apache2
+
+exec {
+  'curl -s https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer':
+    cwd     => '/tmp',
+    creates => '/usr/local/bin/composer',
+    require => Class['php::apache2']
+}
+
+##################################
 # PhantomJS
 exec { 'install-phantomjs':
   command => 'curl http://phantomjs.googlecode.com/files/phantomjs-1.7.0-linux-x86_64.tar.bz2 | sudo tar xjfv - &&

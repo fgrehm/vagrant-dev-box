@@ -22,11 +22,27 @@ GIT
     rbenv (1.1.0)
 
 GIT
+  remote: https://github.com/puppetlabs/puppetlabs-apache
+  ref: 0.4.0
+  sha: 66d5ce9aef8ef6c589a36323bba2879dd0d66fd1
+  specs:
+    apache (0.4.0)
+      puppetlabs/firewall (>= 0.0.4)
+      puppetlabs/stdlib (>= 2.2.1)
+
+GIT
   remote: https://github.com/saz/puppet-memcached.git
   ref: master
   sha: 49dbf102fb6eee90297b2ed6a1fa463a8c5ccee7
   specs:
     memcached (2.0.4)
+
+GIT
+  remote: https://github.com/saz/puppet-php.git
+  ref: master
+  sha: 1f6ca01195d38ced5276b5e675d3cc5117018b83
+  specs:
+    php (1.1.0)
 
 GIT
   remote: https://github.com/thomasvandoren/puppet-redis.git
@@ -38,8 +54,10 @@ GIT
       puppetlabs/gcc (>= 0)
 
 DEPENDENCIES
+  apache (>= 0)
   maestrodev/wget (>= 0)
   memcached (>= 0)
+  php (>= 0)
   postgresql (>= 0)
   puppetlabs/firewall (>= 0)
   puppetlabs/gcc (>= 0)
