@@ -1,4 +1,4 @@
-# Vagrant base box for working with rails
+# General purpose Vagrant box
 
 For now, have a look at `site.pp` to see whats included.
 
